@@ -11,7 +11,7 @@ $(document).ready(function() {
   var tool = new Tool();
 
   tool.onMouseDown = function(event) {
-    var c = Shape.Circle(event.point.x, event.point.y, 20);
+    var c = Shape.Circle(event.point, 20);
     c.fillColor = 'green';
   }
 
