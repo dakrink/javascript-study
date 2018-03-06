@@ -8,8 +8,12 @@ $(document).ready(function() {
   paper.setup(document.getElementById('mainCanvas'));
 
   // TODO
-  var c = Shape.Circle(200, 200, 50);
-  c.fillColor = 'green';
+  var tool = new Tool();
+
+  tool.onMouseDown = function(event) {
+    var c = Shape.Circle(event.point.x, event.point.y, 20);
+    c.fillColor = 'green';
+  }
 
   paper.view.draw();
 });
